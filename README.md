@@ -1,6 +1,6 @@
 # evalx.sh
 
-Welcome to the evalx.sh repository! This repository houses the codebase for evalx.sh, a powerful service that provides evaluation and execution capabilities for various programming languages. This readme provides information about the project, setting up the development environment, and the licensing details.
+:rocket: Welcome to the evalx.sh repository! This repository houses the codebase for evalx.sh, a powerful service that provides evaluation and execution capabilities for various programming languages. This readme provides information about the project, setting up the development environment, and the licensing details.
 
 ## About
 
