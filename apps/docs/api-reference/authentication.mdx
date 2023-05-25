@@ -1,0 +1,22 @@
+---
+title: "Authentication"
+description: "Example overview page before API endpoints"
+---
+
+## API Tokens
+
+To access EvalX API, you must first authenticate your requests using an API key. API keys provide a secure and easy way to authenticate API requests, ensuring that only authorized users can access our services.
+
+To obtain an API key, you must first create an account with EvalX. Once you have registered, you can create a new project from your account dashboard. Each project has a unique API key that you can use to authenticate API requests. You can also regenerate your API key from your project settings page.
+
+To authenticate an API request, you must include your API key in the request headers. The API key should be included in the "Authorization" header as a bearer token. Here's an example:
+
+```bash
+'Authorization': 'Bearer <project_token>'
+```
+
+Once authenticated, you can use the EvalX API to execute code in various languages and runtimes. You can send a HTTP request to our /eval endpoint with your code snippet and language/runtime of choice, and receive the output in the response. You can also provide input data to your code and receive any errors or exceptions that may occur.
+
+We take security seriously at EvalX, and we recommend that you keep your API key secure and avoid sharing it with others. If you suspect that your API key has been compromised, you can regenerate it from your account dashboard.
+
+In summary, to authenticate with EvalX API, you need to generate an API key from your account dashboard and include it in the "Authorization" header of your API requests. If you have any questions or concerns about authentication, please don't hesitate to contact our support team.

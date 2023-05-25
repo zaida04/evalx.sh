@@ -1,0 +1,42 @@
+---
+title: "Run Code"
+api: "POST https://api.evalx.sh/eval"
+description: "This endpoint runs code and returns the result"
+---
+
+### Body
+
+<ParamField body="code" type="string">
+  This is the code that will be run. It can be any valid code in the language you specify.
+</ParamField>
+
+<ParamField body="language" type="string">
+  This is the language that your code belongs to.
+</ParamField>
+
+### Response
+
+<ResponseField name="output" type="string">
+  The output from the stdout of your code.
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl -X POST \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer test-key-1" \
+    -d '{"code": "console.log('Hello world!')", "language": "js"}' \
+https://api.evax.sh/eval
+  
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{ "output": "Hello world!" }
+```
+
+</ResponseExample>

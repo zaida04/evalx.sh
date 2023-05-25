@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Your own custom component styles */
+
+@import 'tailwindcss/utilities';
+
+@layer base {
+  h1 {
+    @apply md:text-6xl text-5xl;
+  }
+
+  h2 {
+    @apply md:text-5xl text-4xl;
+  }
+
+  h3 {
+    @apply md:text-4xl text-3xl;
+  }
+
+  h4 {
+    @apply md:text-3xl text-2xl;
+  }
+
+  p {
+    @apply md:text-xl text-lg;
+  }
+}
