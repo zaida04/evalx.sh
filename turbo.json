@@ -9,10 +9,9 @@
         "^build"
       ],
       "outputs": [
-        "apps/site/.next/**",
-        "apps/site/!.next/cache/**",
-        "packages/engine/dist/**",
-        "apps/runner/dist/**"
+        ".next/**",
+        "!.next/cache/**",
+        "dist/**"
       ]
     },
     "lint": {}
