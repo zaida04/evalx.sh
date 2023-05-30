@@ -1,7 +1,7 @@
 import { FormEvent, useCallback, useState } from "react";
 import { match } from "ts-pattern";
 
-import { CTA_FORM_URL } from "../../util/env";
+import { CTA_FORM_URL } from "../../../util/env";
 
 export default function CTA() {
   return (

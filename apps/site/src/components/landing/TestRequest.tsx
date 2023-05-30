@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import CopyButton from "./CopyButton";
+import CopyButton from "./buttons/CopyButton";
 import { codeSnippets } from "../../util/consts";
 import { css } from "../../util/css";
 const outputString = `{ "output": "Hello world!" }`;

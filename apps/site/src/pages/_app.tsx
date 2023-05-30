@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import { AppProps } from "next/app";
 import localFont from "next/font/local";
 import Head from "next/head";
@@ -30,7 +31,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={SatoshiFont.className}>
-        <Component {...pageProps} />
+        <ClerkProvider>
+          <Component {...pageProps} />
+        </ClerkProvider>
       </main>
     </>
   );

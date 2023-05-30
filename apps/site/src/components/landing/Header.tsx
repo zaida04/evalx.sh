@@ -14,7 +14,11 @@ export default function Header() {
     <div className="flex-none hidden lg:block">
       <ul className="menu space-x-8 menu-horizontal">
         {genNav}
-        <button className="px-6 border-2 border-stone-500 text-white rounded-xl hover:bg-stone-700 font-medium transition-colors">Get Started</button>
+        <button className="px-6 border-2 border-stone-500 text-white rounded-xl hover:bg-stone-700 font-medium transition-colors">
+          <Link href="/dashboard">
+            Get Started
+          </Link>
+        </button>
       </ul>
     </div>
   </>

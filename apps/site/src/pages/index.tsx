@@ -1,4 +1,7 @@
-import CTA from "../components/landing/CTA";
+
+import GetStarted from "../components/landing/buttons/GetStarted";
+import LikeWhatYouSeeCTA from "../components/landing/ctas/LikeWhatYouSee";
+import WaitlistCTA from "../components/landing/ctas/Waitlist";
 import Layout from "../components/landing/Layout";
 import TestRequest from "../components/landing/TestRequest";
 import { description } from "../util/consts";
@@ -10,7 +13,7 @@ export default function Landing() {
         <h1 className="text-7xl font-bold">Code. Post. Done.</h1>
         <p className="py-6 text-xl">{description}</p>
         <div className="flex flex-row justify-center space-x-4">
-          <button className="btn bg-stone-700">Get Started</button>
+          <GetStarted />
           <a href="#try-it-out">
             <button className="btn bg-stone-800 text-white">Try it out</button>
           </a>
@@ -36,9 +39,10 @@ export default function Landing() {
         </div>
         <div className="w-full" id="try-it-out">
           <TestRequest />
+          <LikeWhatYouSeeCTA />
         </div>
         <div className="divider" />
-        <CTA />
+        <WaitlistCTA />
       </div>
     </Layout>
   );
