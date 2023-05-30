@@ -8,6 +8,7 @@ export const url = "https://evalx.sh/" as const;
 export const topbar = {
   "/home": "/",
   "/docs": "/docs",
+  "/pricing": "/pricing",
 } as const;
 
 export const genNav = Object.keys(topbar).map((key) => (
