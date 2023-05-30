@@ -1,4 +1,7 @@
 
+import { useUser } from "@clerk/nextjs";
+import Link from "next/link";
+
 import GetStarted from "../components/landing/buttons/GetStarted";
 import LikeWhatYouSeeCTA from "../components/landing/ctas/LikeWhatYouSee";
 import WaitlistCTA from "../components/landing/ctas/Waitlist";
@@ -7,16 +10,30 @@ import TestRequest from "../components/landing/TestRequest";
 import { description } from "../util/consts";
 
 export default function Landing() {
+  const { isSignedIn } = useUser();
+
   return (
     <Layout>
       <LandingSection>
         <h1 className="text-7xl font-bold">Code. Post. Done.</h1>
         <p className="py-6 text-xl">{description}</p>
         <div className="flex flex-row justify-center space-x-4">
-          <GetStarted />
-          <a href="#try-it-out">
-            <button className="btn bg-stone-800 text-white">Try it out</button>
-          </a>
+          {
+            isSignedIn ?
+              (
+                <Link href="/dashboard">
+                  <button className="btn bg-stone-800 text-white">Go to Dashboard</button>
+                </Link>
+              ) :
+              (
+                <>
+                  <GetStarted />
+                  <a href="#try-it-out">
+                    <button className="btn bg-stone-800 text-white">Try it out</button>
+                  </a>
+                </>
+              )
+          }
         </div>
       </LandingSection>
       <div className="divider" />
@@ -39,12 +56,12 @@ export default function Landing() {
         </div>
         <div className="w-full" id="try-it-out">
           <TestRequest />
-          <LikeWhatYouSeeCTA />
+          {!isSignedIn && <LikeWhatYouSeeCTA />}
         </div>
         <div className="divider" />
         <WaitlistCTA />
       </div>
-    </Layout>
+    </Layout >
   );
 }
 

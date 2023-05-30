@@ -1,8 +1,11 @@
+import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
 
 import { genNav } from "../../util/consts";
 
 export default function Header() {
+  const { isSignedIn } = useUser();
+
   return <>
     <div className="flex-1 px-2 mx-2">
       <h2 className="font-bold">
@@ -16,7 +19,7 @@ export default function Header() {
         {genNav}
         <button className="px-6 border-2 border-stone-500 text-white rounded-xl hover:bg-stone-700 font-medium transition-colors">
           <Link href="/dashboard">
-            Get Started
+            {isSignedIn ? "Dashboard" : "Get Started"}
           </Link>
         </button>
       </ul>
