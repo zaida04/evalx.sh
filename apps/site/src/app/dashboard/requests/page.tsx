@@ -14,7 +14,7 @@ const data = [
 export default function Requests() {
   return <div>
     <div className="btn-group grid grid-cols-2 w-1/4">
-      <button className="btn btn-outline">Previous page</button>
+      <button className="btn btn-outline">Previous</button>
       <button className="btn btn-outline">Next</button>
     </div>
     <div className="relative overflow-x-auto border-2 border-base-content rounded-lg my-4">

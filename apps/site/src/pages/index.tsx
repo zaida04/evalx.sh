@@ -75,7 +75,7 @@ function LandingSection(props: { children: React.ReactNode }) {
   );
 }
 
-function LandingStep(props?: {
+function LandingStep(props: {
   title: string;
   description: string;
   badge?: string;
