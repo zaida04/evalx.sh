@@ -23,7 +23,16 @@ export default function Header() {
           </Link>
         })}
       </div>
-      <UserButton />
+      <UserButton appearance={{
+        "elements": {
+          "avatarBox": {
+            width: "4rem",
+            height: "4rem",
+            borderWidth: "2px",
+            borderColor: "var(--bc)"
+          }
+        }
+      }} />
     </div>
   </div>
 }

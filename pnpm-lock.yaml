@@ -86,6 +86,9 @@ importers:
       '@clerk/nextjs':
         specifier: ^4.19.0
         version: 4.19.0(next@13.4.0)(react-dom@18.2.0)(react@18.2.0)
+      '@clerk/themes':
+        specifier: ^1.7.4
+        version: 1.7.4(react@18.2.0)
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.4.0
         version: 6.4.0
@@ -293,6 +296,15 @@ packages:
       react: '>=16'
     dependencies:
       glob-to-regexp: 0.4.1
+      react: 18.2.0
+    dev: false
+
+  /@clerk/themes@1.7.4(react@18.2.0):
+    resolution: {integrity: sha512-Mco/DHYO/PNtPX7AkCZPv2WivpSua4aXzIOf4vDKCmSC6U0KRJXLK1AXDoDaNVRIt5wwUxqoJz0u6ospT4P7iw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
       react: 18.2.0
     dev: false
 
