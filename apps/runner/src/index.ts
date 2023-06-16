@@ -5,17 +5,15 @@ import { z } from "zod";
 import { minify } from "terser";
 import { Stopwatch } from "@sapphire/stopwatch";
 import { PORT } from "./env";
-import db from "./db/client";
 import logger from "./logger";
 import sLog from "./stopwatch";
-import { runs } from "./db/schema";
 import { createId } from "./util";
-import { eq } from "drizzle-orm";
+import { eq, runs } from "@evalx/db";
+import db from "./db";
 
 const engine = new Docker({
   BASE: "http://localhost:2375",
 });
-
 const app = express();
 app.use(express.json());
 

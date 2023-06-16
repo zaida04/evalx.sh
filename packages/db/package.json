@@ -1,0 +1,25 @@
+{
+  "name": "@evalx/db",
+  "version": "1.0.0",
+  "description": "Database driver and migrations for EvalX",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "author": "Nico",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "migrate:generate": "drizzle-kit generate:pg --schema=./lib/db/schema.ts",
+    "migrate:run": "ts-node lib/run-migrations.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "drizzle-kit": "^0.18.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.0",
+    "drizzle-orm": "^0.26.5",
+    "postgres": "^3.3.5"
+  }
+}

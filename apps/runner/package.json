@@ -8,18 +8,15 @@
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
     "build": "tsc",
-    "dev": "nodemon",
-    "migrate:generate": "drizzle-kit generate:pg --schema=./src/db/schema.ts",
-    "migrate:run": "ts-node src/run-migrations.ts"
+    "dev": "nodemon"
   },
   "dependencies": {
     "@evalx/engine": "workspace:*",
+    "@evalx/db": "workspace:*",
     "@sapphire/stopwatch": "^1.5.0",
-    "drizzle-orm": "^0.26.5",
     "express": "^4.18.2",
     "nanoid": "3.3.6",
     "pino": "^8.14.1",
-    "postgres": "^3.3.5",
     "terser": "^5.18.0",
     "zod": "^3.21.4",
     "zod-express-middleware": "^1.4.0"
@@ -30,7 +27,6 @@
     "drizzle-kit": "^0.18.1",
     "nodemon": "^2.0.22",
     "pino-pretty": "^10.0.0",
-    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }
 }
