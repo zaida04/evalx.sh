@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    container_name: EVALX_DB
+    environment:
+      POSTGRES_DB: evalx
+      POSTGRES_USER: evalx_user
+      POSTGRES_PASSWORD: evalx_pass
+    volumes:
+      - evalx-postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5421:5432
+
+volumes:
+  evalx-postgres-data:
+
+
