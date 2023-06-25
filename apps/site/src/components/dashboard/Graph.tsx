@@ -35,23 +35,20 @@ const data = [
 ];
 
 export default function Graph() {
-  return <div className="flex flex-col items-center justify-center h-full border-2 border-base-content rounded-2xl">
+  return <div className="flex flex-col items-center justify-center h-full border-2 border-base-content rounded-2xl gap-4 p-4">
     <h4>Recent Activity</h4>
-    <ResponsiveContainer width={550} height="100%">
+    <ResponsiveContainer width="100%" height="100%">
       <LineChart
-        width={500}
-        height={300}
         data={data}
         margin={{
-          top: 10,
-          right: 30,
-          left: 20,
-          bottom: 5,
+          "right": 60,
+          "left": 20
+
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="date" />
-        <YAxis />
+        <CartesianGrid strokeDasharray="3 3" stroke="gold"  />
+        <XAxis dataKey="date" stroke="gold" />
+        <YAxis stroke="gold" />
         <Tooltip />
         <Legend />
         <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />

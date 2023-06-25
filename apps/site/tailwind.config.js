@@ -19,7 +19,7 @@ module.exports = {
       {
         luxury: {
           // eslint-disable-next-line @typescript-eslint/no-var-requires
-          ...require("daisyui/src/colors/themes")["[data-theme=luxury]"],
+          ...require("daisyui/src/theming/themes")["[data-theme=luxury]"],
         },
       },
     ],
