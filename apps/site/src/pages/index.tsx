@@ -15,6 +15,9 @@ export default function Landing() {
   return (
     <Layout>
       <LandingSection>
+        <div className="alert flex flex-row border-2 border-yellow-900 mb-10">
+          <span className="text-xs md:text-md">EvalX is in-progress and not production ready yet. Expect bugs.</span>
+        </div>
         <h1 className="text-7xl font-bold">Code. Post. Done.</h1>
         <p className="py-6 text-xl">{description}</p>
         <div className="flex flex-row justify-center space-x-4">
@@ -67,7 +70,7 @@ export default function Landing() {
 
 function LandingSection(props: { children: React.ReactNode }) {
   return (
-    <div className="hero h-screen">
+    <div className="hero h-[75vh]">
       <div className="hero-content text-center">
         <div className="max-w-2xl">{props.children}</div>
       </div>

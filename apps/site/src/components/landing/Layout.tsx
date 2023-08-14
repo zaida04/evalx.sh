@@ -6,7 +6,7 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 export default function Layout(props: { children: React.ReactNode }) {
-  return <div className="drawer bg-base-200 h-fit">
+  return <div className="drawer flex flex-col bg-base-200 h-fit">
     <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
     <div className="drawer-content flex flex-col my-4 md:mx-32 mx-4">
       <div className="w-full navbar">
